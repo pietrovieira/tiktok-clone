@@ -1,3 +1,7 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
 @font-face {
 font-family: 'sofiapro-regular';
 src: URL('../../../assets/fonts/Sofia Pro Regular.otf') format('truetype');
@@ -35,69 +39,45 @@ h1,h2,h3,h4,h5,h6{
     margin: 0;
 }
 body{
-    .header-container{
-        .header-content{
-            display: flex;
-            height: 100%;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-            border-bottom: 1px solid #ccc;
-            .header-left{
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                min-width: 235px;
-                button.hamburger{
-                    cursor: pointer;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-evenly;
-                    width: 40px;
-                    align-items: center;
-                    height: 30px;
-                    span{
-                        transition: opacity 0.3s,transform 0.3s,background-color 0.3s;
-                        box-sizing: border-box;
-                        height: 2px;
-                        width: 20px;
-                        border-radius: 4px;
-                        background-color: #000000;
-                    }
-                }
-                a{
-                    label.lb-clone{
-                        font-family: "sofiapro-bold",PingFangSC,sans-serif;
-                        font-weight: 700;
-                        font-size: 16px;
-                        line-height: 1;
-                        color: #000;
-                    }
-                }
-            }
-            .header-right{
-                a.watch-now{
-                    cursor: pointer;
-                    color: #fff;
-                    background: #fe2c55;
-                    height: 44px;
-                    line-height: 44px;
-                    padding: 0 10px;
-                    align-items: center;
-                    border-radius: 2px;
-                    min-width: 120px;
-                    display: flex;
-                    justify-content: space-around;
-                    // 
-                    font-family: "proxima-semibold",PingFangSC,sans-serif;
-                    font-weight: 600;
-                    color: #fff;
-                    font-size: 16px;
-                }
-            }
+
+    button.hamburger{
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 40px;
+        align-items: center;
+        height: 30px;
+        span{
+            transition: opacity 0.3s,transform 0.3s,background-color 0.3s;
+            box-sizing: border-box;
+            height: 2px;
+            width: 20px;
+            border-radius: 4px;
+            background-color: #000000;
         }
     }
+    a{
+        label.lb-clone{
+            font-family: "sofiapro-bold",PingFangSC,sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 1;
+            color: #000;
+        }
+    }
+    .tiktok-logo{
+        width: 180px;
+    }
+    .b-watchnow{
+        cursor: pointer;
+        color: #fff;
+        background: #fe2c55;
+        height: 44px;
+        font-family: "proxima-semibold",PingFangSC,sans-serif;
+        font-size: 16px;
+    }
+
     section#home{
         text-align: center;
         padding: 36px 0 0 0;
@@ -170,26 +150,12 @@ body{
             }
         }
     }
-    footer.footer-container{
+    footer{
         width: 100%;
         color: #ffffff;
         background: #000000;
         padding-bottom: 24px;
-        .footer-content{
-            max-width: 1200px;
-            margin: 0 auto;
-            .footer-top{
-                position: relative;
-                display: flex;
-                flex-direction: row;
-                align-items: flex-start;
-                justify-content: space-between;
-                width: 100%;
-                padding-top: 40px;
                 .footer-content-column{
-                    flex: 1 1 0%;
-                    max-width: 170px;
-                    padding-right: 8px;
                     color: #ffffff;
                     h2{
                         font-weight: 500;
@@ -208,29 +174,13 @@ body{
                         }
                     }
                 }
-            }
-            .footer-bottom{
                 .language-selection {
-                    justify-content: space-between;
-                    width: 100%;
                     font-family: "proxima-regular",PingFangSC,sans-serif;
                     font-weight: 400;
-                    box-sizing: border-box;
-                    width: 172px;
-                    height: 36px;
-                    border: 1px solid #8a8b91;
-                    background-color: #000;
-                    outline: none;
-                    border-radius: 2px;
                     font-size: 14px;
-                    line-height: 36px;
                     padding: 0 16px;
                     cursor: pointer;
-                    position: relative;
-                    text-align: left;
                 }
-            }
-        }
     }
 }
 
